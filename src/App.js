@@ -1,7 +1,31 @@
 
+import { Route, Routes } from "react-router-dom"
+import Navbar from './components/Navbar'
+import { Home, Login, Register } from './pages'
 import React from 'react';
-import './App.css'; // Import your CSS file for styling
+import './App.css'
 import BackgroundImg from './img/landing-page-background-img.jpg';
+
+const App = () => {
+  return (
+    <>
+      <Navbar/>
+      <Routes>
+
+        <Route path="/" element={<Home/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/register" element={<Register/>} />
+
+      </Routes>
+    </>
+  )
+}
+
+
+
+
+
+
 
 function App() {
   return (
@@ -21,3 +45,4 @@ function App() {
 }
 
 export default App;
+
